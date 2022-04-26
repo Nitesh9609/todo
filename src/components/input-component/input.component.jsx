@@ -32,7 +32,7 @@ class InputForm extends React.Component{
                     </input>
 
                     <button
-                        onClick = {()=>this.addTodo}>
+                        onClick = {()=>this.additems}>
                         Add</button>
                 </div>
 
