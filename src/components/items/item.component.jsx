@@ -12,3 +12,4 @@ const AddItems = ({todo}) =>{
 }
 
 export default AddItems
+

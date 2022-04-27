@@ -12,7 +12,14 @@ class InputForm extends React.Component{
     
   handleOnChange = (event) => {
     this.setState({additems:event.target.value})
-    
+  }
+
+  todos =() =>{
+      this.setState((state)=>{
+          return{
+              todo : [...state.todo,this.state.additems]
+          }
+      })
   }
 
   
@@ -32,14 +39,14 @@ class InputForm extends React.Component{
                     </input>
 
                     <button
-                        onClick = {()=>this.additems}>
+                        onClick = {this.todos}>
                         Add</button>
                 </div>
 
                 <div>
                      {
-                        this.state.todo.map((todo) => {
-                           return(<AddItems todo={todo}/>) 
+                        this.state.todo.map((todo,index) => {
+                           return(<AddItems todo={todo} key={index} />) 
                         })
 
                      }
