@@ -1,16 +1,25 @@
 
 .add-items {
-    position:initial;
-    
+    margin: 20px;
+}
+
+// .checkbox{
+
+// margin-right: 20vw;
+// margin-top: 5vh;
+
+// }
+
+.description{
     text-align: center;
+    
 }
 
-.checkbox{
-
-margin-right: 20vw;
-margin-top: 5vh;
-
+.MuiButton-root {
+    color: black;
 }
 
-
-
+.name{
+    font-weight: bolder;
+    font-size: 2rem;
+}

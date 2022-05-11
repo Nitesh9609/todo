@@ -1,6 +1,13 @@
 import axios  from 'axios'
 import './item.style.scss'
 import React from 'react'
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import EditIcon from '@mui/icons-material/Edit';
+
+
 
 
 const AddItems = ({todos:{todoName,todoDescription},id}) =>{
@@ -28,11 +35,18 @@ const handleOnModify = () =>{
         <>
             <div className="add-items">
                 <div className='checkbox'>
+                <Container maxWidth="sm">
+                    <Box sx={{ bgcolor: '#cfe8fc', height: 'auto' }}>
+                        <span className='name'>{todoName}</span><br/>
+                        <span className='description'>Description: {todoDescription.toUpperCase()}</span><br/>
+                        <Button><EditIcon onClick={handleOnModify}/></Button>
+                        <Button sx={{ margin: '20px' }} 
+                            onClick={handleOnDelete} 
+                            startIcon={<DeleteIcon />}>
+                        </Button>
+                    </Box>
+                </Container>
                     
-                    <span>{todoName}</span>
-                    <span>{todoDescription}</span>
-                    <button onClick={handleOnModify}>modify</button>
-                    <button onClick={handleOnDelete}>Delete</button>
                 </div>
                 
             </div>
